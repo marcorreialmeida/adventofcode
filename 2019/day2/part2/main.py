@@ -14,13 +14,10 @@ def bakeItTillYouMakeIt(program, expected):
     for noun in range(0,100):
         for verb in range(0,100):
             print(noun, verb)
-            try:
-                candidate = runProgram(program[:],noun,verb)
-                print("Candidate", candidate)
-                if candidate == expected:
-                    return 100 * noun + verb
-            except IndexError:
-                pass
+            candidate = runProgram(program[:],noun,verb)
+            print("Candidate", candidate)
+            if candidate == expected:
+                return 100 * noun + verb
     else:
         print("Could not find a good pair")
 
