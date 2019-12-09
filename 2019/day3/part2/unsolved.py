@@ -43,3 +43,6 @@ path1StepsToInsters = pathsToIntersections(path1, intersections)
 path2StepsToInsters = pathsToIntersections(path2, intersections)
 print("I guess:", min(map(lambda x: path1StepsToInsters[x] + path2StepsToInsters[x], intersections)))
 # wrong (too high): 301038, 92220, 92218
+
+What I'm doing wrong:
+ - locsInPartialPath eventually includes "inters" but that iteration includes more locations than it needed to reach it
