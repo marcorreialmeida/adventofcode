@@ -14,7 +14,7 @@ with open('input.txt') as f:
     height = len(lines)
     width = len(lines[0])
 
-def countTrees(slope):
+def count_trees(slope):
     trees = 0
     x, y = 1, 1
     while y < height:
@@ -23,4 +23,4 @@ def countTrees(slope):
         trees += 1 if lines[y-1][x-1] == "#" else 0
     return trees
 
-print(math.prod(map(countTrees, slopes)))
+print(math.prod(map(count_trees, slopes)))
